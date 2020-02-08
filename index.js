@@ -5,6 +5,9 @@ document.querySelector('form').addEventListener('submit', event => {
 
     const encrypted = btoa(input.value);
 
-    document.querySelector('#link-input').value = encrypted;
+    const linkInput = document.querySelector('#link-input')
+    
+    linkInput.value = `${window.location}#${encrypted}`;
+    linkInput.select();
 });
 
